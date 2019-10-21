@@ -21,6 +21,9 @@ apt-get install \
  python-setuptools \
  python-virtualenv -y
 
+apt install -y python3-pip
+pip install pyOpenSSL --upgrade
+
 #download algo
 git clone https://github.com/trailofbits/algo.git
 cd algo
