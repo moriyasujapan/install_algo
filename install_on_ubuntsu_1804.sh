@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /root
+pushd /root
 
 if [ -d ./algo ]; then
   exit 0;
@@ -303,5 +303,11 @@ rm -rf /var/www/html/configs
 cp -R configs /var/www/html
 chmod 755 -R /var/www/html/configs
 
+pushd /var/www/html
+ls -l configs/localhost/wireguard/*.png|awk '{print $9}'|awk -F. '{print $1}'|awk -F/ '{print $4}' > user_list
+popd
+
+popd
+cp -R web/* /var/www/html/
 echo "http://$global_ip_addr/configs/localhost"
 
