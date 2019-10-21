@@ -23,6 +23,7 @@ apt-get install \
 
 apt install -y python3-pip
 pip install pyOpenSSL --upgrade
+pip install wheel --upgrade
 
 #download algo
 git clone https://github.com/trailofbits/algo.git
