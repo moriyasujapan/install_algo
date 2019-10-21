@@ -27,6 +27,14 @@ h6 {
 <button onclick="displayByMethod();">送信</button>
 <script>
 <!--
+window.onload = function() {
+	var urlParams = new URLSearchParams(window.location.search);
+	if (urlParams.has("user") && urlParams.has("methods")) {
+		document.getElementById("user").value = urlParams.get("user");
+		document.getElementById("methods").value = urlParams.get("methods");
+		displayByMethod();
+	}
+}
 var displayByMethod = function() {
 	var user = document.getElementById("user").value;
 	var method = document.getElementById("methods").value;
@@ -55,6 +63,7 @@ var displaySS = function() {
 	text += "Your obfs             :  plain\n";
 	text += "Your Encryption Method:  chacha20\n";
 	text += "</pre>\n";
+	document.getElementById("usage").innerHTML = text;
 }
 
 var displayApple = function(user) {
@@ -81,7 +90,7 @@ var displayWireGuard = function(user) {
 }
 var displayStrongSwan = function(user) {
 	var link = "configs/localhost/ipsec/manual/" + user;
-	var text = "<pre>no support(OCJBqCt4O)\n";
+	var text = "<pre>no support(IhjP_Q11p)\n";
 	text += "<a href='configs/localhost/ipsec/manual/cacert.pem'>cacert.pem</a>\n";
 	text += "<a href='"+link+".conf'>senbao010.conf</a>\n";
 	text += "<a href='"+link+".p12'>senbao010.p12</a>\n";
