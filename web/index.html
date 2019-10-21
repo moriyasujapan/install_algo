@@ -1,0 +1,102 @@
+<html>
+<!--
+pushd /var/www/html
+ls -l configs/localhost/wireguard/*.png|awk '{print $9}'|awk -F. '{print $1}'|awk -F/ '{print $4}' > user_list
+popd
+//-->
+<head>
+<title>algo</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+<style>
+h6 {
+	color: red;
+}
+</style>
+</head>
+<body>
+<pre>
+<input type="text" id="user" placeholder="userid" />
+<select id="methods">
+<option value="apple">Apple</option>
+<option value="wireguard">Android@WireGuard</option>
+<option value="shadowsocks_android">Android@ShadowSocks</option>
+<option value="strongswan">IPSec</option>
+<!--option value="windows">Windows10</option-->
+</select>
+<button onclick="displayByMethod();">送信</button>
+<script>
+<!--
+var displayByMethod = function() {
+	var user = document.getElementById("user").value;
+	var method = document.getElementById("methods").value;
+	console.log(user + "/" + method);
+	if (method == "apple") {
+		displayApple(user);
+	} else if (method == "wireguard") {
+		displayWireGuard(user);
+	} else if (method == "strongswan") {
+		displayStrongSwan(user);
+	} else if (method == "shadowsocks_android") {
+		displaySS(user);
+	} else if (method == "windows") {
+		displayWindows10(user);
+	}
+}
+
+var displaySS = function() {
+	var text = "<pre>";
+	text += "<a href='shadowsocks.apk'>shadowsocks--universal-4.8.5.apk</a>\n";
+	text += "Congratulations, ShadowsocksR server install completed!\n";
+	text += "Your Server IP        :  167.179.83.48\n";
+	text += "Your Server Port      :  443\n";
+	text += "Your Password         :  00000000\n";
+	text += "Your Protocol         :  origin\n";
+	text += "Your obfs             :  plain\n";
+	text += "Your Encryption Method:  chacha20\n";
+	text += "</pre>\n";
+}
+
+var displayApple = function(user) {
+	var link = "configs/localhost/ipsec/apple/" + user + ".mobileconfig";
+	var text = '';
+	text += "<p><a href='" + link + "'><h2>ここ</h2></a>をクリックしてインストールしてください</p>";
+	text += "<p>ダウンロードできない方はユーザ名が不正です。</p>";
+	text += "<h2>せつめい</h2>";
+	text += "<pre>";
+	text += "<h6>クリックするとこういう画面が出ます。赤枠をクリック</h6><img src='img/apple1.jpg'/>\n";
+	text += "<h6>設定を開くとこういう画面が出ます。赤枠をクリック</h6><img src='img/apple2.jpg'/>\n";
+	text += "<h6>右上のインストールをクリック</h6><img src='img/apple3.jpg'/>\n";
+	text += "<h6>iPhoneにパスコードを設定している場合は下記の画面が出ます。</h6><img src='img/apple4.jpg'/>\n";
+	text += "<h6>下の方のインストールをクリック</h6><img src='img/apple5.jpg'/>\n";
+	text += "<h6>右上完了をクリック</h6><img src='img/apple6.jpg'/>\n";
+	text += "<h6>下記のVPNの設定が追加されればOK</h6><img src='img/apple7.jpg'/>\n";
+	text += "</pre>";
+	document.getElementById("usage").innerHTML = text;
+}
+var displayWireGuard = function(user) {
+	var link = "configs/localhost/wireguard/" + user + ".png";
+	var text = "<p>画像をWireGuardでスキャンしてください。</p><p>画像が出ない方はユーザが不正です。</p><p>WireGuardについては検索して調べてください。</p><p>APKファイルはこちら。<a href='wireguard.apk'>(WireGuard_v0.0.20190708_apkpure.com.apk)</a></p><img src='"+link+"' />";
+	document.getElementById("usage").innerHTML = text;
+}
+var displayStrongSwan = function(user) {
+	var link = "configs/localhost/ipsec/manual/" + user;
+	var text = "<pre>no support(OCJBqCt4O)\n";
+	text += "<a href='configs/localhost/ipsec/manual/cacert.pem'>cacert.pem</a>\n";
+	text += "<a href='"+link+".conf'>senbao010.conf</a>\n";
+	text += "<a href='"+link+".p12'>senbao010.p12</a>\n";
+	text += "<a href='"+link+".secrets'>senbao010.secrets</a>\n</pre>";
+	document.getElementById("usage").innerHTML = text;
+}
+var displayWindows10 = function(user) {
+	document.getElementById("usage").innerHTML = "";
+	
+}
+
+//-->
+</script>
+<div id="usage"></div>
+</pre>
+</body>
+</html>
+

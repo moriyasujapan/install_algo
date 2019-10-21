@@ -1,0 +1,16 @@
+--2019-10-21 03:15:18--  https://download.apkpure.com/b/apk/Y29tLndpcmVndWFyZC5hbmRyb2lkXzQ1MV9mZjYyMDYxZA?_fn=V2lyZUd1YXJkX3YwLjAuMjAxOTA3MDhfYXBrcHVyZS5jb20uYXBr
+Resolving download.apkpure.com (download.apkpure.com)... 104.20.83.194, 104.20.82.194
+Connecting to download.apkpure.com (download.apkpure.com)|104.20.83.194|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://apkpure.com/url?ou=%2Fb%2Fapk%2FY29tLndpcmVndWFyZC5hbmRyb2lkXzQ1MV9mZjYyMDYxZA%3F_fn%3DV2lyZUd1YXJkX3YwLjAuMjAxOTA3MDhfYXBrcHVyZS5jb20uYXBr&q=https%3A%2F%2Fapkpure.com [following]
+--2019-10-21 03:15:18--  https://apkpure.com/url?ou=%2Fb%2Fapk%2FY29tLndpcmVndWFyZC5hbmRyb2lkXzQ1MV9mZjYyMDYxZA%3F_fn%3DV2lyZUd1YXJkX3YwLjAuMjAxOTA3MDhfYXBrcHVyZS5jb20uYXBr&q=https%3A%2F%2Fapkpure.com
+Resolving apkpure.com (apkpure.com)... 104.20.82.194, 104.20.83.194
+Connecting to apkpure.com (apkpure.com)|104.20.82.194|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘Y29tLndpcmVndWFyZC5hbmRyb2lkXzQ1MV9mZjYyMDYxZA?_fn=V2lyZUd1YXJkX3YwLjAuMjAxOTA3MDhfYXBrcHVyZS5jb20uYXBr’
+
+                              Y29tLndpcmVndWFyZC5hbmRyb2lkX     [<=>                                                                                                                                      ]       0  --.-KB/s               Y29tLndpcmVndWFyZC5hbmRyb2lkXzQ1MV9mZjYyMDYxZA?_fn=V2lyZUd1     [ <=>                                                                                                                                     ]   2.70K  --.-KB/s    in 0s      
+
+2019-10-21 03:15:19 (29.7 MB/s) - ‘Y29tLndpcmVndWFyZC5hbmRyb2lkXzQ1MV9mZjYyMDYxZA?_fn=V2lyZUd1YXJkX3YwLjAuMjAxOTA3MDhfYXBrcHVyZS5jb20uYXBr’ saved [2765]
+
